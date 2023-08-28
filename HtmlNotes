@@ -1,0 +1,59 @@
+Our HTML Skeleton actually has a Body.
+
+The body consists of the following - the <header>, <main> and <footer> respectively.    
+
+Table 
+
+<table border="1" cellpadding="8" cellspacing="0">
+
+<body>
+    <!-- Update the table tag below -->
+    <table border='1' cellpadding='8' cellspacing='1'>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Location</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>5th may</td>
+                <td>Athens</td>
+                <td>Arrive at Athens</td>
+            </tr>
+            <tr>
+                <td>6th may</td>
+                <td>Milos Islands</td>
+                <td>Take a ferry</td>
+            </tr>
+            <tr>
+                <td>7th - 10th May</td>
+                <td>Milos Islands</td>
+                <td>Plaka castle</td>
+            </tr>
+        </tbody>
+    </table>    
+</body>
+
+
+<!-- DIV -->
+
+    <div> is a powerful element in HTML.
+    It is the 'The one ring to rule them all'.
+
+    <div> is a container that divides the page into sections
+    <div> helps to apply CSS styles to a block of content.
+    <div> element can hold various types of content, including text, images, videos, tables.
+
+<!-- SEMANTIC HTML -->
+    <div> elements were primary used to create groups or sections which have a common logical and visual behaviour on our webpage.
+
+    In Semantic HTML - instead of using <div> - we use tags such as <header>, <nav>, <section>, <article>, <aside>.
+
+    Once written in semantic html, the code is easier to read for other developers
+    The code is also easier to read for screen readers and for SEO since they are able to under stand what each section of the code is supposed to represent
+
+    The semantic elements - <header>, <nav> , <main> and <footer> constitute the structure of the webpage.
+    
+    <section> defines elements in a document, such as chapters, headings, or any other area of the document with the same theme. <article> holds content that makes sense on its own such as articles, blogs, comments, etc.

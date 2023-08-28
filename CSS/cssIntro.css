@@ -1,0 +1,41 @@
+* {
+    background-color: grey;
+}
+
+li {
+    list-style-type: devanagari;
+}
+
+.special {
+    list-style-type: tamil;
+}
+
+li.special,
+span.special {
+    color: orange;
+    font-weight: bold;
+}
+
+/* Styling things based on their location in a document */
+li em {
+    color: rebeccapurple;
+}
+
+/* styling a paragraph when it comes directly after a heading - styles applied only to paragraph not to the h1*/
+h1+p {
+    font-size: 200%;
+    color: pink;
+}
+
+/* Styling things based on state */
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    text-decoration: none;
+}

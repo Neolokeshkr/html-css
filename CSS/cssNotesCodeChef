@@ -1,0 +1,211 @@
+
+Introduction to CSS
+
+    CSS can be written in-line, as an internal stylesheet within the html file as well as an external stylesheet.
+
+    External stylesheets are the preferred method for today's web development practices
+
+    The external stylesheet code is stored in a file with a .css extension
+
+    An internal stylesheet is written using the <style> element inside the <head> element of an HTML file
+
+
+
+Why is extrnal CSS stylesheet beneficial beneficial?
+
+
+    Reusability: With an external stylesheet, you can define styles once and apply them to multiple HTML pages. This promotes consistency across your website, ensuring that elements such as headers, paragraphs, and links look the same throughout
+
+    Efficiency: When using an external stylesheet, the CSS file is cached by the web browser after the first request. Subsequent page loads do not require downloading the CSS file again, resulting in faster page rendering
+
+    Collaboration: When working on a web project with multiple developers or designers, using an external stylesheet allows for better collaboration. Different team members can work on the CSS separately, without interfering with each other's HTML files. This promotes parallel development and reduces the chances of code conflicts
+
+    Browser compatibility: You can use CSS vendor prefixes and feature detection techniques within the external stylesheet to handle browser-specific implementations
+
+
+<!-- SELECTOR -->
+
+    A selector is used to target the specific HTML element(s) to be styled by the declaration.
+
+    'Type' selector
+        Type selector (also known as an element selector) targets elements based on their HTML tag names.
+        The following selector will update the text color of all <p> elements to red.
+
+        p {
+          color: red;
+        }
+
+    'Universal' selector
+        It targets and applies styles to all elements in an HTML document.
+
+        * { 
+          font-family: Verdana;
+        }
+
+    'Class' selector
+        In CSS, a class selector is a way to select and style elements based on their class attribute.
+        The class selector is denoted by a period (.) followed by the class name.
+        To use a class selector, you need to assign the specified class name to the desired HTML elements using the class attribute.
+        Multiple elements can share the same class, allowing you to apply consistent styles to them.
+
+        /* In the css file */
+            .my-class {
+              /* CSS styles for elements with the class "my-class" go here */
+            }
+
+        <!-- In the html file -->
+            <p class="my-class">This paragraph has the class "my-class". </p>
+            <p>This paragraph does not have the class "my-class". </p>
+            <div class="my-class">This div also has the class "my-class". </div>
+
+    'Id' selector
+        We use the 'Id' selector when an HTML element needs to be styled uniquely. The HTML element is given an an ID using the id attribute.
+        The '#' character is used along with the id name in the css file
+        Unlike class names, which can be shared among multiple elements, each ID must be unique within the HTML document.
+
+        /* in the css file */
+            #my-id {
+              /* CSS styles for the element with the ID "my-id" go here */
+            }
+
+
+        <!-- in the html file -->
+            <p id="my-id">This paragraph has the ID "my-id".</p>
+            <p>This paragraph does not have the ID "my-id".</p>
+
+<!-- SELECTOR SPECIFITY -->
+    Specificity in CSS determines which styles are applied to an element when multiple conflicting styles are defined. Here's a breakdown of the factors that determine specificity, from highest to lowest:
+
+        
+        Inline styles: Styles applied directly to an HTML element using the style attribute have the highest specificity. Inline styles override any other styles defined elsewhere.
+        
+        ID selectors: Selectors targeting elements by their ID (e.g., #my-id) have the second highest specificity. Since IDs must be unique within an HTML document, the style defined by an ID selector will be highly specific to that element.
+        
+        Class selectors, attribute selectors, and pseudo-classes: Selectors targeting elements by their class (e.g., .my-class), attribute (e.g., [type="text"]), or pseudo-class (e.g., :hover) have medium specificity.
+        
+        Type / Element selectors: Selectors targeting elements by their tag name (e.g., p, div) have the lowest specificity.
+
+<!-- COMBINING SELECTORS -->
+    To prevent writing repetitive styles within CSS, it is possible add common CSS styles to multiple selectors.
+
+        .section1 {
+          font-family: Verdana;
+        }
+
+        #paragraph4 {
+          font-family: Verdana;
+        }
+
+        can be combined and written as 
+
+        .section1, #paragraph4 {
+          font-family: Verdana;
+        }
+
+<!-- CSS STYLING -->
+
+    Font family
+        Remember that there are browser specific fonts. You should take this into account while deciding on the font-family
+            h1 {
+            font-family: 'Arial';
+            }
+
+    Font size
+        Sample syntax - here px refers to pixels
+            p {
+            font-size: 18px;
+            }
+
+    Font weight
+        Used to decide how the text will be displayed - bold v/s thin
+        can accept numeric values from 100 to 900, with increments of 100
+        'normal' - Regular font weight of 400
+        'bold' - font weight of 700
+            p {
+              font-weight: bold;
+            }
+
+    Text align
+        The text-align property in CSS is used to control the horizontal alignment of text within its containing element.
+
+        It allows you to specify how the text is positioned relative to the element's content box.
+        
+        The text-align property can be set to one of the following commonly used values:
+        
+        left / center / right — aligns text to the respective side of its parent element
+
+        justify — Adjusts the spacing between words in a line to create equal lengths of each line, except for the last line.
+
+        This often results in the text being aligned to both the left and right edges of the container
+
+        Note that the text-align property does not affect the vertical alignment of the text.
+        
+        Syntax format
+        
+            p {
+              text-align: center;
+            }
+
+    Color Background color and Opacity
+
+    'Foreground' color is the color that of the element itself.
+
+    The 'background' color is the color applied to the area behind the text or content of an element.
+
+    In web development and CSS, you can set the foreground color and background color using the color and background-color properties, respectively.
+
+        p {
+          color: blue;
+          background-color: green;
+        }
+
+    The 'opacity' property in CSS can be used to adjust the transparency of an element. It affects the entire element and any content within it.
+
+    It’s measured from 0 to 1, with 1 representing fully visible and and 0 representing fully invisible.
+    It is used for both text and images
+
+        p {
+          opacity: 0.5;
+        }
+
+    Background Image
+
+        You can set an image as the background image of an element.
+
+            #section1 {
+                background-image: url('https://cdn.codechef.com/Learning/MILOS.jpeg');
+            }
+
+<!-- CSS layout and positioning -->
+
+    <!-- Box Model -->
+
+    The box model in CSS is a fundamental concept that describes how elements are rendered and how their dimensions and spacing are calculated.
+    It is essential for understanding how elements are displayed on a web page.
+    
+    The box model consists of four main components:
+        
+        Content: This is the actual content of the element, such as text, images, or other HTML elements
+        
+        Padding: The padding is the space between the content and the border. It provides a buffer area around the content, inside the element. Padding can be set using CSS properties like:
+        'padding-top', 'padding-right', 'padding-bottom', and 'padding-left'
+        
+        Border: The border surrounds the padding and content and defines the visible boundary of the element. It can be styled using properties like : 
+        'border-width', 'border-style', and 'border-color'
+        
+        Margin: The margin is the space between the border of an element and the surrounding elements. It creates a gap or separation between elements. 
+        Margins can be set using properties like 
+            'margin-top', 'margin-right', 'margin-bottom', and 'margin-left'.
+
+
+<!-- CSS layout and positioning - HTML flow -->
+    The flow of HTML refers to the default behavior of how HTML elements are rendered and positioned in a document without any specific CSS styling or positioning.
+
+    The key difference between the box model and the flow of HTML is that the box model focuses on the individual elements' dimensions, spacing, and layout properties, while the flow of HTML refers to the overall arrangement of elements on a web page.
+
+    CSS can be used to modify the HTML flow by applying the following properties
+        position
+        display
+        z-index
+        float
+        clear
