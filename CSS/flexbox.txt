@@ -1,0 +1,68 @@
+Flexbox Notes - frm Flexbox Froggy
+
+1. justify-content (default : flex-start)
+    flex-start: Items align to the left side of the container.
+    flex-end: Items align to the right side of the container.
+    center: Items align at the center of the container.
+    space-between: Items display with equal spacing between them.
+    space-around: Items display with equal spacing around them.
+    space-evenly: 
+
+2. align-items (default : stretch)
+    flex-start: Items align to the top of the container.
+    flex-end: Items align to the bottom of the container.
+    center: Items align at the vertical center of the container.
+    baseline: Items display at the baseline of the container.
+    stretch: Items are stretched to fit the container.
+
+3. flex-direction : (default : row)
+    This CSS property defines the direction items are placed in the container, and accepts the following values:-
+        row: Items are placed the same as the text direction.
+        row-reverse: Items are placed opposite to the text direction.
+        column: Items are placed top to bottom.
+        column-reverse: Items are placed bottom to top.
+
+4. order : (<integer> (... -1, 0 (default), 1, ...)
+    items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2)
+
+5. align-self
+    Aligns a flex item along the cross axis, overriding the align-items value. This property accepts the same values as align-items and its value for the specific item:-
+        flex-start 
+        flex-end 
+        center 
+        baseline 
+        stretch
+
+6. flex-wrap: (default : nowrap)
+    Specifies whether flex items are forced on a single line or can be wrapped on multiple lines.
+        nowrap: Every item is fit to a single line.
+        wrap: Items wrap around to additional lines.
+        wrap-reverse: Items wrap around to additional lines in reverse.
+
+7. flex-flow : (default : nowrap)
+    The two properties flex-direction and flex-wrap are used so often together that the shorthand property flex-flow was created to combine them. This shorthand property accepts the value of the two properties separated by a space.
+    For example, you can use flex-flow: row wrap to set rows and wrap them.
+        flex-flow: column wrap;
+
+8. align-content : (default : stretch)
+    Aligns a flex container's lines within the flex container when there is extra space on the cross-axis.
+    When there is only one line, align-content has no effect.
+    align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. 
+        flex-start: Lines are packed at the top of the container.
+        flex-end: Lines are packed at the bottom of the container.
+        center: Lines are packed at the vertical center of the container.
+        space-between: Lines display with equal spacing between them.
+        space-around: Lines display with equal spacing around them.
+        stretch: Lines are stretched to fit the container.
+
+Questions
+1. How to center a div?
+Ans.
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+2. Difference between align-content and align-items?
+Ans.  align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container.   

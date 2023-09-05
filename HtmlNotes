@@ -55,5 +55,7 @@ Table
     The code is also easier to read for screen readers and for SEO since they are able to under stand what each section of the code is supposed to represent
 
     The semantic elements - <header>, <nav> , <main> and <footer> constitute the structure of the webpage.
-    
+
     <section> defines elements in a document, such as chapters, headings, or any other area of the document with the same theme. <article> holds content that makes sense on its own such as articles, blogs, comments, etc.
+
+    <!--  -->
